@@ -25,31 +25,27 @@ public class Lacators {
         WebElement searchBoxInput = driver.findElement(By.id("twotabsearchtextbox"));
         searchBoxInput.sendKeys("Laptop", Keys.ENTER);
 
+
 //        name
-        WebElement searchboxName = driver.findElement(By.name("field-keywords"));
+        WebElement searchBoxName = driver.findElement(By.name("field-keywords"));
 
 //        className
-        WebElement hesaplar = driver.findElement(By.className("nav-line-2 "));
-        hesaplar.click();
+        WebElement classnameEx = driver.findElement(By.className("nav-line-2 "));
 
 //        cssSelector
-        WebElement cssornek = driver.findElement(By.cssSelector("input[placeholder='Telefon Numarası']"));
+        WebElement cssselector = driver.findElement(By.cssSelector("input[placeholder='Telefon Numarası']"));
 
 //        xpath
-        WebElement xpathEx= driver.findElement(By.xpath("//nav[@class='nav-assistant']"));
+        WebElement xpathex = driver.findElement(By.xpath("//div//span[@id='nav-search-submit-text']"));
 
 //        linkText
-        WebElement link = driver.findElement(By.linkText("Yeni Çıkanlar"));
+        WebElement linktext = driver.findElement(By.linkText("Yeni Çıkanlar"));
 
 //        partialLinkText
-        WebElement link2 = driver.findElement(By.partialLinkText("Çıkanlar"));
+        WebElement linktext2 = driver.findElement(By.linkText("Çıkanlar"));
 
 //        tagName
-        WebElement tag = driver.findElement(By.tagName("denmee"));
-
-
-
-
+        WebElement tagnaem= driver.findElement(By.tagName("deneme"));
 
 
         // tarayıcı kapat
