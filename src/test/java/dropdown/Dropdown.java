@@ -25,21 +25,21 @@ public class Dropdown {
         WebElement country = driver.findElement(By.xpath("//*[@id=\"post-2646\"]/div[2]/div/div/div/p/select"));
         Select select = new Select(country);
 
-        //1. Yöntem Visible text
-        //select.selectByVisibleText("Aruba");
-
-
-        //2. Value değeriyle seçim yapmak.
-        //select.selectByValue("ATG");
-
-
-        //3. yöntem indeksle seçim yapmak.
-//        select.selectByIndex(3);
+        //1. Yöntem visible text ile almak
+//        select.selectByVisibleText("Andorra");
 //        Thread.sleep(2000);
 
-        List<WebElement> allOptions = select.getOptions();
+//        2. Yöntem value ya göre alma
+//        select.selectByValue("ALB");
+//        Thread.sleep(2000);
 
-        for(WebElement option : allOptions) {
+        //3. indekse göre almak
+        select.selectByIndex(2);
+        Thread.sleep(2000);
+
+        //4.Konsola tüm değerleri yazdırma
+        List<WebElement> allOptions = select.getOptions();
+        for(WebElement option : allOptions){
             System.out.println(option.getText());
         }
         driver.quit();
