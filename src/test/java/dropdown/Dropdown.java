@@ -18,30 +18,28 @@ public class Dropdown {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
-        //https://www.globalsqa.com/demo-site/select-dropdown-menu/ adresine git
+        //https://demoqa.com/checkbox adresine git
         String url = "https://www.globalsqa.com/demo-site/select-dropdown-menu/";
         driver.get(url);
 
         WebElement country = driver.findElement(By.xpath("//*[@id=\"post-2646\"]/div[2]/div/div/div/p/select"));
         Select select = new Select(country);
 
-        //1. Yöntem visible text ile almak
-//        select.selectByVisibleText("Andorra");
-//        Thread.sleep(2000);
+//1. Visible Textine göre
+        // select.selectByVisibleText("American Samoa");
 
-//        2. Yöntem value ya göre alma
-//        select.selectByValue("ALB");
-//        Thread.sleep(2000);
+        //2. yöntem Value değrine göre seçme
+// select.selectByValue("ASM");
 
-        //3. indekse göre almak
-        select.selectByIndex(2);
+// 3. Yöntem İndex değerine göre seçme
+        select.selectByIndex(4);
+
+        List<WebElement> allOptions = select.getOptions();
+        for (WebElement options : allOptions) {
+            System.out.println(options.getText());
+        }
         Thread.sleep(2000);
 
-        //4.Konsola tüm değerleri yazdırma
-        List<WebElement> allOptions = select.getOptions();
-        for(WebElement option : allOptions){
-            System.out.println(option.getText());
-        }
         driver.quit();
     }
 }
